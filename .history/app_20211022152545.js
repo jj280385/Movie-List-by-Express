@@ -17,11 +17,7 @@ app.get('/', (req, res) => {
 
 //setting search function 
 app.get('/search', (req,res) => {
-  const keyword = req.query.keyword
-  const movies = movieList.results.filter (movie => {
-    return movie.title.toLowerCase().includes(keyword.toLocaleLowerCase())
-  })
-  res.render('index' , {movies:movies,keyword:keyword})
+  res.render('index' , {movies:movieList.results})
 })
 
 //setting show page

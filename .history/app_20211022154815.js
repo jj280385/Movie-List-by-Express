@@ -21,7 +21,7 @@ app.get('/search', (req,res) => {
   const movies = movieList.results.filter (movie => {
     return movie.title.toLowerCase().includes(keyword.toLocaleLowerCase())
   })
-  res.render('index' , {movies:movies,keyword:keyword})
+  res.render('index' , {movies:movies})
 })
 
 //setting show page
